@@ -68,11 +68,7 @@ def to_wkt_list(doc):
         )
     
     ring_wkt_list = []
-    context = etree.iterwalk(
-             doc,
-             events=("start",),
-             tag="{http://www.opengis.net/kml/2.2}*",
-    )
+    context = etree.iterwalk(doc, events=("start",))
     for action, elem in context:
         if elem.tag in ['{http://www.opengis.net/kml/2.2}Polygon',
                         '{http://www.opengis.net/kml/2.2}MultiPolygon']:
