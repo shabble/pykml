@@ -121,5 +121,5 @@ def validate_kml():
     except NameError:
         pass #variable was not defined
     else:
-        fileobject.close
+        fileobject.close()
 
